@@ -71,31 +71,66 @@
 
 
 
-    <h2>Results</h2>
 
-    <h3>OpenFOAM CFD Result</h3>
-    <img src="openfoam-result.png" alt="OpenFOAM CFD result around an airfoil" class="project-image">
-    <p>
-        CFD visualisation showing the velocity magnitude around the airfoil.
-    </p>
+<h2>Results & Analysis</h2>
 
-    <h3>Analytic Ground-Truth Speed Field</h3>
-    <img src="analytic-speed-field.png" alt="Analytic ground truth speed field around an airfoil" class="project-image">
-    <p>
-        Analytical reference solution used as the ground truth for comparison.
-    </p>
+<section class="results-section">
 
-    <h3>PINN Prediction</h3>
-    <img src="pinn-prediction.png" alt="PINN prediction of the airfoil speed field" class="project-image">
-    <p>
-        Physics-Informed Neural Network prediction of the airfoil speed field.
-    </p>
+    <div class="result-card">
+        <h3>OpenFOAM RANS Simulation</h3>
 
-    <h3>Absolute Error</h3>
-    <img src="absolute-error.png" alt="Absolute error plot comparing prediction and ground truth" class="project-image">
-    <p>
-        Error plot showing where the prediction deviates from the analytical solution.
-    </p>
+        <img src="openfoam-result.png.png"
+             alt="OpenFOAM CFD velocity field"
+             class="project-image">
+
+        <p>
+            Velocity magnitude contours showing flow behaviour
+            and wake development around the aerofoil.
+        </p>
+    </div>
+
+    <h3>Analytical Solution vs PINN Prediction</h3>
+
+    <div class="comparison-grid">
+
+        <div class="result-card">
+            <h4>Analytical Solution</h4>
+
+            <img src="analytic-speed-field.png.png"
+                 alt="Analytical velocity field"
+                 class="project-image">
+
+            <p>Analytical reference flow field.</p>
+        </div>
+
+        <div class="result-card">
+            <h4>PINN Prediction</h4>
+
+            <img src="pinn-prediction.png.png"
+                 alt="PINN predicted velocity field"
+                 class="project-image">
+
+            <p>PINN prediction at the held-out 8° angle.</p>
+        </div>
+
+    </div>
+
+    <div class="result-card">
+        <h3>Absolute Error</h3>
+
+        <img src="absolute-error.png.png"
+             alt="Absolute error between analytical and predicted fields"
+             class="project-image">
+
+        <p>
+            The held-out PINN prediction achieved approximately
+            23% relative error. The largest discrepancies were
+            observed near the aerofoil surface.
+        </p>
+    </div>
+
+</section>
+
 
 
 <h2>Key Learnings</h2>
