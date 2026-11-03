@@ -97,13 +97,23 @@
         Error plot showing where the prediction deviates from the analytical solution.
     </p>
 
-    <h2>Key Learnings</h2>
-    <p>
-        Through this project, I developed experience in computational aerodynamics,
-        numerical modelling and technical comparison of simulation methods. I also
-        strengthened my understanding of how machine-learning approaches such as
-        PINNs can be used to model physical systems and where their limitations appear.
-    </p>
+
+<h2>Key Learnings</h2>
+
+<p>
+    This project deepened my understanding of computational
+    aerodynamics, from mesh generation and convergence behaviour
+    in OpenFOAM to the assumptions underlying potential-flow
+    theory. Building the PINN gave me a concrete sense of how
+    physics-informed losses can be used to constrain a network’s
+    predictions, and the 23% held-out error was a useful lesson
+    in where that approach currently falls short, particularly
+    near the aerofoil surface where velocity gradients are
+    steepest. It also clarified the gap between this inviscid,
+    2D formulation and the viscous, turbulent, 3D flows relevant
+    to real aerodynamic design, which is the natural next step
+    for this work.
+</p>
 
 </main>
 
