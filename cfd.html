@@ -19,13 +19,20 @@
 
     <a href="index.html">← Back to Portfolio</a>
 
-    <h2>Project Overview</h2>
-    <p>
-        This project investigated flow around an airfoil using computational and
-        data-driven methods. I compared CFD and analytical flow-field results with
-        a Physics-Informed Neural Network (PINN) prediction to assess how well the
-        model captured aerodynamic behaviour.
-    </p>
+
+<h2>Project Overview</h2>
+
+<p>
+    This project models flow around a Joukowski aerofoil using three
+    complementary methods: a full OpenFOAM RANS simulation, an exact
+    analytical potential flow solution, and a physics informed neural
+    network (PINN) trained to reproduce that solution. The goal was
+    to test whether a PINN can act as a fast surrogate for CFD,
+    including whether it generalises to an angle of attack it was
+    never trained on, as a stepping stone toward ML-based
+    aerodynamic modelling.
+</p>
+
 
     <h2>Tools & Technologies</h2>
     <p>
