@@ -44,13 +44,28 @@
 </p>
 
 
-    <h2>What I Did</h2>
-    <p>
-        I analysed the flow around an airfoil and examined the velocity field using
-        different approaches. This included CFD-based visualisation, comparison with
-        an analytic ground-truth solution, evaluation of a PINN prediction, and
-        assessment of model performance using error visualisation.
-    </p>
+
+<h2>What I Did</h2>
+
+<p>
+    I set up and ran a 2D OpenFOAM simulation of flow over an
+    aerofoil, including mesh generation, boundary conditions and
+    residual convergence checks. Separately, I derived an exact
+    analytical solution for potential flow around a Joukowski
+    aerofoil using conformal mapping, giving a ground truth I
+    could sample anywhere in the flow field with no meshing
+    required. I then built a PINN that predicts velocity potential
+    as a function of position and angle of attack, with velocity
+    recovered through automatic differentiation so the predicted
+    flow is incompressible by construction. The network was trained
+    on five angles of attack and evaluated on an eighth it had
+    never seen, to test whether it had learned the underlying
+    physics rather than memorised training points. The held-out
+    prediction reached a relative error of about 23%, which I
+    used to identify where the model struggles most (close to
+    the aerofoil surface) and what to try next.
+</p>
+
 
     <h2>Results</h2>
 
