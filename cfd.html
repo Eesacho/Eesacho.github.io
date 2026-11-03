@@ -45,26 +45,30 @@
 
 
 
+
 <h2>What I Did</h2>
 
 <p>
-    I set up and ran a 2D OpenFOAM simulation of flow over an
-    aerofoil, including mesh generation, boundary conditions and
-    residual convergence checks. Separately, I derived an exact
-    analytical solution for potential flow around a Joukowski
-    aerofoil using conformal mapping, giving a ground truth I
-    could sample anywhere in the flow field with no meshing
-    required. I then built a PINN that predicts velocity potential
-    as a function of position and angle of attack, with velocity
-    recovered through automatic differentiation so the predicted
-    flow is incompressible by construction. The network was trained
-    on five angles of attack and evaluated on an eighth it had
-    never seen, to test whether it had learned the underlying
-    physics rather than memorised training points. The held-out
-    prediction reached a relative error of about 23%, which I
-    used to identify where the model struggles most (close to
-    the aerofoil surface) and what to try next.
+    I set up and ran a 2D RANS simulation of flow over the aerofoil
+    in OpenFOAM, including mesh generation, boundary condition
+    specification and residual convergence checks. Separately, I
+    derived an exact analytical solution for potential flow around
+    the Joukowski aerofoil using conformal mapping, providing a
+    ground truth that could be sampled anywhere in the flow field
+    without meshing. I then developed a PINN to predict velocity
+    potential as a function of position and angle of attack, with
+    velocity recovered through automatic differentiation so the
+    predicted flow is incompressible by construction. The network
+    was trained on angles of attack of -5°, 0°, 5°, 10° and 15°,
+    and evaluated on a held-out angle of 8° that it never saw during
+    training, to assess whether it had learned the underlying physics
+    rather than memorised the training data. The held-out prediction
+    achieved a relative error of approximately 23%, which was used
+    to identify where the model performs least accurately (close
+    to the aerofoil surface) and to inform directions for further
+    improvement.
 </p>
+
 
 
     <h2>Results</h2>
