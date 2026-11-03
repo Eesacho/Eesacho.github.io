@@ -1,3 +1,10 @@
+
+/* General Website Styling */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -23,6 +30,7 @@ header p {
 
 main {
     width: 80%;
+    max-width: 1100px;
     margin: 60px auto;
 }
 
@@ -30,6 +38,8 @@ h2 {
     font-size: 32px;
     margin-bottom: 30px;
 }
+
+/* Homepage Project Cards */
 
 .project {
     background-color: white;
@@ -42,6 +52,14 @@ h2 {
     margin-top: 0;
     font-size: 24px;
 }
+
+.project p {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* About Me Section */
+
 .about {
     background-color: white;
     padding: 30px;
@@ -58,28 +76,6 @@ h2 {
     line-height: 1.8;
     color: #4b5563;
 }
-.project p {
-    color: #4b5563;
-    line-height: 1.6;
-}
-
-/* Project image sizing */
-
-.project-image {
-    display: block;
-    width: 100%;
-    max-width: 550px;
-    height: auto;
-    margin: 20px auto;
-    border-radius: 10px;
-}
-
-/* Images in comparison cards */
-
-.comparison-grid .project-image {
-    max-width: 100%;
-}
-
 
 /* CFD Results Section */
 
@@ -95,35 +91,6 @@ h2 {
     border: 1px solid #e5e7eb;
 }
 
-.comparison-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-}
-
-.comparison-grid .result-card {
-    min-width: 0;
-}
-
-
-/* Project image sizing */
-
-.project-image {
-    display: block;
-    width: 100%;
-    max-width: 550px;
-    height: auto;
-    margin: 20px auto;
-    border-radius: 10px;
-}
-
-/* Images in comparison cards */
-
-.comparison-grid .project-image {
-    max-width: 100%;
-}
-
-
 .result-card h3,
 .result-card h4 {
     margin-top: 0;
@@ -134,10 +101,54 @@ h2 {
     color: #4b5563;
 }
 
-/* Stack images on smaller screens */
+/* Image Sizing */
+
+.project-image {
+    display: block;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Side-by-Side Comparison */
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.comparison-grid .result-card {
+    min-width: 0;
+}
+
+.comparison-grid .project-image {
+    max-width: 100%;
+}
+
+/* Mobile Responsiveness */
 
 @media (max-width: 700px) {
+    header {
+        padding: 50px 6%;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    main {
+        width: 90%;
+        margin: 35px auto;
+    }
+
     .comparison-grid {
         grid-template-columns: 1fr;
+    }
+
+    .result-card {
+        padding: 18px;
     }
 }
