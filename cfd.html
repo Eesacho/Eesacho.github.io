@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,37 +12,68 @@
 
 <header>
     <h1>CFD & Airfoil Analysis</h1>
-    <p>OpenFOAM • Python • Aerodynamics</p>
+    <p>OpenFOAM • Python • PINNs • Aerodynamics</p>
 </header>
 
 <main>
+
     <a href="index.html">← Back to Portfolio</a>
 
     <h2>Project Overview</h2>
     <p>
-        This project explores aerodynamic flow around an airfoil
-        using computational fluid dynamics and numerical modelling.
+        This project investigated flow around an airfoil using computational and
+        data-driven methods. I compared CFD and analytical flow-field results with
+        a Physics-Informed Neural Network (PINN) prediction to assess how well the
+        model captured aerodynamic behaviour.
     </p>
 
     <h2>Tools & Technologies</h2>
-    <p>OpenFOAM, Python, CFD</p>
-
-    <h2>Project Methodology</h2>
     <p>
-        This section will describe the geometry, simulation setup,
-        numerical methods and analysis.
+        OpenFOAM, Python, PyTorch, CFD, PINNs, Aerodynamics
+    </p>
+
+    <h2>What I Did</h2>
+    <p>
+        I analysed the flow around an airfoil and examined the velocity field using
+        different approaches. This included CFD-based visualisation, comparison with
+        an analytic ground-truth solution, evaluation of a PINN prediction, and
+        assessment of model performance using error visualisation.
     </p>
 
     <h2>Results</h2>
+
+    <h3>OpenFOAM CFD Result</h3>
+    <img src="openfoam-result.png" alt="OpenFOAM CFD result around an airfoil" class="project-image">
     <p>
-        CFD visualisations, graphs and results will be added here.
+        CFD visualisation showing the velocity magnitude around the airfoil.
+    </p>
+
+    <h3>Analytic Ground-Truth Speed Field</h3>
+    <img src="analytic-speed-field.png" alt="Analytic ground truth speed field around an airfoil" class="project-image">
+    <p>
+        Analytical reference solution used as the ground truth for comparison.
+    </p>
+
+    <h3>PINN Prediction</h3>
+    <img src="pinn-prediction.png" alt="PINN prediction of the airfoil speed field" class="project-image">
+    <p>
+        Physics-Informed Neural Network prediction of the airfoil speed field.
+    </p>
+
+    <h3>Absolute Error</h3>
+    <img src="absolute-error.png" alt="Absolute error plot comparing prediction and ground truth" class="project-image">
+    <p>
+        Error plot showing where the prediction deviates from the analytical solution.
     </p>
 
     <h2>Key Learnings</h2>
     <p>
-        This section will explain the technical skills developed
-        and challenges encountered.
+        Through this project, I developed experience in computational aerodynamics,
+        numerical modelling and technical comparison of simulation methods. I also
+        strengthened my understanding of how machine-learning approaches such as
+        PINNs can be used to model physical systems and where their limitations appear.
     </p>
+
 </main>
 
 </body>
