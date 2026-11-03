@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #1f2937;
+}
+
+header {
+    background-color: #0f172a;
+    color: white;
+    padding: 80px 10%;
+}
+
+header h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 20px;
+    color: #cbd5e1;
+}
+
+main {
+    width: 80%;
+    margin: 60px auto;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.project {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+}
+
+.project h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.project p {
+    color: #4b5563;
+    line-height: 1.6;
+}
