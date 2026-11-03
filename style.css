@@ -62,3 +62,10 @@ h2 {
     color: #4b5563;
     line-height: 1.6;
 }
+.project-image {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 20px 0;
+    border-radius: 10px;
+}
